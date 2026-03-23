@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // For .includes and other ES6 features
+    "module": "es6",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "scripts/main.ts"
+  ] // Only include your main TypeScript file
+}

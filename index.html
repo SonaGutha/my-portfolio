@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="noise"></div>
+
+    <header class="site-header">
+        <a class="logo" href="#">YourName.dev</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section-reveal">
+            <p class="kicker">Software Engineer • GitHub Portfolio</p>
+            <h1>
+                I build reliable products
+                <span>from idea to production.</span>
+            </h1>
+            <p class="hero-copy">
+                I focus on backend systems, cloud-native development, and clean architecture.
+                I enjoy shipping maintainable solutions with measurable impact.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="https://github.com/sonagutha" target="_blank">View GitHub</a>
+                <a class="btn ghost" href="#projects">See Projects</a>
+            </div>
+
+            <!-- Hero Metrics -->
+            <div class="hero-metrics">
+                <article>
+                    <h3 data-target="0">0</h3>
+                    <p>Repositories</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-reveal">
+            <h2>About</h2>
+            <p>
+                I specialize in designing APIs, automating deployments, and translating complex requirements into
+                practical systems.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-reveal">
+            <div class="section-heading">
+                <h2>Featured Projects</h2>
+                <a href="https://github.com/sonagutha?tab=repositories" target="_blank">All repos ↗</a>
+            </div>
+            <div class="projects-tools">
+                <input id="projectSearch" type="search" placeholder="Search projects by name or description">
+                <select id="languageFilter" aria-label="Filter projects by language">
+                    <option value="all">All languages</option>
+                </select>
+            </div>
+            <p id="projectsStatus" class="projects-status">Showing all projects</p>
+            <div class="card-grid" id="projectsContainer"></div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="stack section-reveal">
+            <h2>Tech Stack</h2>
+            <div class="chips" id="skillsContainer"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-reveal">
+            <h2>Let’s build something useful.</h2>
+            <p>Available for software engineering roles and contract work.</p>
+            <form id="contactForm">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit" class="btn primary">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Your Name • Built with HTML, CSS & TypeScript</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
