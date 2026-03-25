@@ -10,6 +10,32 @@ interface GitHubUserProfile {
 }
 
 let allRepos: Project[] = [];
+const featuredRepoOrder = ['wattznow', 'yahtzee', 'weatherapp'];
+
+function isFeaturedRepo(repo: Project): boolean {
+    return featuredRepoOrder.indexOf(repo.name.toLowerCase()) !== -1;
+}
+
+function prioritizeFeaturedRepos(repos: Project[]): Project[] {
+    const featuredSet = new Set(featuredRepoOrder);
+    const featured: Project[] = [];
+    const others: Project[] = [];
+
+    repos.forEach(repo => {
+        const normalized = repo.name.toLowerCase();
+        if (featuredSet.has(normalized)) {
+            featured.push(repo);
+        } else {
+            others.push(repo);
+        }
+    });
+
+    featured.sort(
+        (a, b) => featuredRepoOrder.indexOf(a.name.toLowerCase()) - featuredRepoOrder.indexOf(b.name.toLowerCase())
+    );
+
+    return [...featured, ...others];
+}
 
 function createProjectCard(repo: Project): HTMLElement {
     const card = document.createElement('article');
@@ -41,7 +67,7 @@ function renderProjects(repos: Project[]) {
     const projectsContainer = document.getElementById('projectsContainer')!;
     projectsContainer.innerHTML = '';
 
-    repos.forEach(repo => {
+    prioritizeFeaturedRepos(repos).forEach(repo => {
         projectsContainer.appendChild(createProjectCard(repo));
     });
 }
@@ -119,7 +145,7 @@ async function loadProjects() {
     }
 
     const profile: GitHubUserProfile = profileData;
-    allRepos = data;
+    allRepos = data.filter(isFeaturedRepo);
 
     setupProjectFilters(allRepos);
     applyProjectFilters();
@@ -136,7 +162,20 @@ async function loadProjects() {
 loadProjects();
 
 // Skills
-const skills = ["Java", "Python", "TypeScript", "Docker", "AWS", "PostgreSQL"];
+const skills = [
+    "Java",
+    "Spring Boot",
+    "Python",
+    "FastAPI",
+    "REST APIs",
+    "TypeScript",
+    "PostgreSQL",
+    "MongoDB",
+    "IBM ODM",
+    "Jenkins",
+    "Docker",
+    "JUnit + Mockito"
+];
 const skillsContainer = document.getElementById('skillsContainer')!;
 skills.forEach(skill => {
     const span = document.createElement('span');
@@ -153,17 +192,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Contact form validation
-const form = document.getElementById('contactForm') as HTMLFormElement;
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-    if (!email.includes('@')) alert('Please enter a valid email.');
-    else {
-        alert('Thank you! Form submitted.');
-        form.reset();
-    }
-});
+
 
 // Reveal on scroll
 const sections = document.querySelectorAll<HTMLElement>('.section-reveal');

@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Software Engineer</title>
+    <title>Sona Shree Reddy Gutha | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,11 +15,14 @@
     <div class="noise"></div>
 
     <header class="site-header">
-        <a class="logo" href="#">YourName.dev</a>
+        <a class="logo" href="#">Sona Shree Reddy Gutha</a>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#now">Now</a>
             <a href="#stack">Stack</a>
+            <a href="#how-i-work">How I Work</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -24,14 +30,15 @@
     <main>
         <!-- Hero Section -->
         <section class="hero section-reveal">
-            <p class="kicker">Software Engineer • GitHub Portfolio</p>
+            <p class="kicker">Software Engineer • 7 Years • Insurance + AI Backends</p>
             <h1>
-                I build reliable products
-                <span>from idea to production.</span>
+                I build scalable backend systems
+                <span>for enterprise and startup products.</span>
             </h1>
             <p class="hero-copy">
-                I focus on backend systems, cloud-native development, and clean architecture.
-                I enjoy shipping maintainable solutions with measurable impact.
+                Software Engineer with 7 years of experience across health and life insurance platforms and
+                recent AI-driven backend development at fAIshion.ai. I specialize in Java, Spring Boot,
+                Python, RESTful APIs, microservices, and maintainable architecture that ships with measurable impact.
             </p>
             <div class="hero-actions">
                 <a class="btn primary" href="https://github.com/sonagutha" target="_blank">View GitHub</a>
@@ -47,12 +54,37 @@
             </div>
         </section>
 
+        <!-- Proof of Impact -->
+        <section id="impact" class="impact section-reveal">
+            <h2>Proof of Impact</h2>
+            <div class="impact-strip">
+                <article>
+                    <h3>~60%</h3>
+                    <p>Reduced redundant database calls by designing a centralized, decoupled logging service.</p>
+                </article>
+                <article>
+                    <h3>65+ Sprints</h3>
+                    <p>Delivered 65+ Agile sprints at Deloitte with consistent on-time completion and no post-release defects.</p>
+                </article>
+                <article>
+                    <h3>30%</h3>
+                    <p>Reduced redundant code across 10+ backend modules through refactoring and modularization.</p>
+                </article>
+                <article>
+                    <h3>60+ Fixes</h3>
+                    <p>Analyzed and resolved 60+ high-priority E2E, regression, and UAT defects under tight timelines.</p>
+                </article>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="about section-reveal">
             <h2>About</h2>
             <p>
-                I specialize in designing APIs, automating deployments, and translating complex requirements into
-                practical systems.
+                I design and build backend services from requirement analysis to production support. My background spans
+                modernization of legacy insurance systems into Java/Spring Boot microservices, rule-engine driven claim workflows,
+                and AI startup backend development with Python/FastAPI. I enjoy solving high-impact problems with clear APIs,
+                reliable releases, and strong cross-team collaboration.
             </p>
         </section>
 
@@ -72,25 +104,136 @@
             <div class="card-grid" id="projectsContainer"></div>
         </section>
 
+        <!-- Case Studies -->
+        <section id="case-studies" class="case-studies section-reveal">
+            <h2>Mini Case Studies</h2>
+            <div class="study-grid">
+                <article class="study-card">
+                    <h3>Centralized Event Logging Platform | fAIshion.ai</h3>
+                    <p><strong>Problem:</strong> Logging was service-specific, MongoDB-heavy, and caused duplicate calls and schema drift.</p>
+                    <p><strong>Approach:</strong> Built a centralized logging API and standardized event schema across backend and frontend integrations.</p>
+                    <p><strong>Tradeoffs:</strong> Invested upfront in shared contracts and migration effort to gain long-term observability and consistency.</p>
+                    <p><strong>Result:</strong> Reduced redundant DB calls by ~60% and improved reliability of production event capture.</p>
+                </article>
+                <article class="study-card">
+                    <h3>Health Insurance Modernization | Deloitte</h3>
+                    <p><strong>Problem:</strong> Legacy mainframe workflows were limiting scalability and slowing claims turnaround.</p>
+                    <p><strong>Approach:</strong> Migrated logic into Java/Spring Boot microservices with REST APIs and IBM ODM rule services.</p>
+                    <p><strong>Tradeoffs:</strong> Balanced strict release timelines with phased modernization to reduce migration risk.</p>
+                    <p><strong>Result:</strong> Delivered 65+ successful sprints, improved processing efficiency, and maintained zero post-release defects.</p>
+                </article>
+                <article class="study-card">
+                    <h3>Life Insurance API Enablement | TCS</h3>
+                    <p><strong>Problem:</strong> Legacy life insurance modules needed API-first access and cleaner maintainability.</p>
+                    <p><strong>Approach:</strong> Developed RESTful Java services, optimized backend modules, and supported stable releases with unit tests.</p>
+                    <p><strong>Tradeoffs:</strong> Worked within legacy constraints while incrementally introducing cleaner coding patterns.</p>
+                    <p><strong>Result:</strong> Improved service scalability, reduced production issues, and increased delivery confidence.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Architecture Snapshots -->
+        <section id="architecture" class="architecture section-reveal">
+            <h2>Architecture Snapshots</h2>
+            <div class="diagram-grid">
+                <article class="diagram-card">
+                    <h3>Centralized Telemetry (fAIshion.ai)</h3>
+                    <pre>Web App + Backend Services -> /api/telemetry -> Validation -> PostgreSQL -> Analytics</pre>
+                </article>
+                <article class="diagram-card">
+                    <h3>Claims Adjudication Flow (Deloitte)</h3>
+                    <pre>Channels -> Spring Boot APIs -> IBM ODM Rules -> Adjudication Services -> SQL Stores</pre>
+                </article>
+                <article class="diagram-card">
+                    <h3>Release and Quality Pipeline</h3>
+                    <pre>Code Commit -> Peer Review -> Jenkins/UCD Pipeline -> UAT -> Production Release</pre>
+                </article>
+            </div>
+        </section>
+
+        <!-- Now Section -->
+        <section id="now" class="now section-reveal">
+            <h2>Now</h2>
+            <div class="now-grid">
+                <article>
+                    <h3>Building</h3>
+                    <p>Backend services and telemetry integrations for AI product workflows at fAIshion.ai.</p>
+                </article>
+                <article>
+                    <h3>Learning</h3>
+                    <p>Advanced TypeScript patterns and cloud-native backend practices for multi-stack engineering teams.</p>
+                </article>
+                <article>
+                    <h3>Exploring</h3>
+                    <p>AI-assisted development workflows that improve debugging speed without compromising code quality.</p>
+                </article>
+            </div>
+        </section>
+
         <!-- Tech Stack Section -->
         <section id="stack" class="stack section-reveal">
             <h2>Tech Stack</h2>
             <div class="chips" id="skillsContainer"></div>
         </section>
 
+        <!-- Credibility -->
+        <section id="credibility" class="credibility section-reveal">
+            <h2>Credibility</h2>
+            <div class="cred-grid">
+                <article>
+                    <h3>Domain Depth</h3>
+                    <p>7 years across health and life insurance platforms with hands-on experience in enterprise-critical systems.</p>
+                </article>
+                <article>
+                    <h3>Delivery Track Record</h3>
+                    <p>65+ Agile sprints delivered with consistent quality, release ownership, and stakeholder collaboration.</p>
+                </article>
+                <article>
+                    <h3>Leadership and Mentorship</h3>
+                    <p>Led release activities and supported new hires through knowledge transfer across cross-geographical teams.</p>
+                </article>
+                <article>
+                    <h3>Education</h3>
+                    <p>M.S. Computer Science, Illinois Institute of Technology (GPA 3.4); B.Tech ECE, Sridevi Women's Engineering College.</p>
+                    <a href="https://github.com/sonagutha" target="_blank">Project portfolio ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- How I Work -->
+        <section id="how-i-work" class="how-i-work section-reveal">
+            <h2>How I Work</h2>
+            <ul>
+                <li>Translate complex requirements into clean API and microservice designs with clear ownership boundaries.</li>
+                <li>Build reliability into delivery through JUnit/Mockito tests, regression awareness, and production-safe releases.</li>
+                <li>Prioritize observability with standardized events, meaningful logs, and data that supports quick diagnosis.</li>
+                <li>Refactor actively to keep services maintainable, reduce duplication, and improve long-term delivery speed.</li>
+                <li>Collaborate deeply with analysts, SMEs, QA, and developers to ship high-quality outcomes under tight timelines.</li>
+            </ul>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact section-reveal">
             <h2>Let’s build something useful.</h2>
-            <p>Available for software engineering roles and contract work.</p>
-            <form id="contactForm">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <button type="submit" class="btn primary">Send</button>
-            </form>
+            <p>Open to backend and software engineering roles where reliability, scale, and business impact matter.</p>
+            <a class="btn primary" href="mailto:sonashree.g@gmail.com">Get in Touch ↗</a>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Your Name • Built with HTML, CSS & TypeScript</p>
+        <p>© 2026 Sona Gutha • Built with HTML, CSS & TypeScript</p>
+        <div class="footer-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/sona-gutha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M6.94 8.5v9h-3v-9h3Zm.2-2.78c0 .98-.74 1.78-1.7 1.78h-.02c-.93 0-1.68-.8-1.68-1.78 0-1 .77-1.78 1.72-1.78s1.66.78 1.68 1.78Zm10.86 6.62v5.16h-3v-4.8c0-1.2-.43-2.02-1.5-2.02-.82 0-1.3.56-1.52 1.1-.08.2-.1.47-.1.74v4.98h-3s.04-8.08 0-8.92h3v1.26c.4-.62 1.12-1.5 2.74-1.5 2 0 3.38 1.3 3.38 4Z" />
+                </svg>
+            </a>
+            <a href="https://github.com/sonagutha" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 .5a12 12 0 0 0-3.8 23.38c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.54-1.4-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.82 1.24 1.82 1.24 1.06 1.84 2.78 1.3 3.46 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.46-1.36-5.46-6.04 0-1.34.46-2.42 1.22-3.28-.12-.3-.54-1.54.12-3.2 0 0 1-.32 3.3 1.24a11.34 11.34 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.66 1.66.24 2.9.12 3.2.76.86 1.22 1.94 1.22 3.28 0 4.7-2.8 5.74-5.48 6.04.44.38.82 1.1.82 2.22v3.3c0 .32.22.68.82.58A12 12 0 0 0 12 .5Z" />
+                </svg>
+            </a>
+        </div>
     </footer>
 
     <script src="scripts/main.js"></script>
