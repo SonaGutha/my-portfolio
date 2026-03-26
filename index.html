@@ -16,15 +16,21 @@
 
     <header class="site-header">
         <a class="logo" href="#">Sona Shree Reddy Gutha</a>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#now">Now</a>
-            <a href="#stack">Stack</a>
-            <a href="#how-i-work">How I Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-actions">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#now">Now</a>
+                <a href="#stack">Stack</a>
+                <a href="#how-i-work">How I Work</a>
+                <a href="#contact">Contact</a>
+                <a href="#booking">Book a Meeting</a>
+            </nav>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+                🌙
+            </button>
+        </div>
     </header>
 
     <main>
@@ -94,36 +100,32 @@
                 <h2>Featured Projects</h2>
                 <a href="https://github.com/sonagutha?tab=repositories" target="_blank">All repos ↗</a>
             </div>
-            <div class="projects-tools">
-                <input id="projectSearch" type="search" placeholder="Search projects by name or description">
-                <select id="languageFilter" aria-label="Filter projects by language">
-                    <option value="all">All languages</option>
-                </select>
-            </div>
-            <p id="projectsStatus" class="projects-status">Showing all projects</p>
-            <div class="card-grid" id="projectsContainer"></div>
+            <div id="projectsApp"></div>
         </section>
 
-        <!-- Case Studies -->
-        <section id="case-studies" class="case-studies section-reveal">
-            <h2>Mini Case Studies</h2>
+        <!-- Experience Section -->
+        <section id="experience" class="case-studies section-reveal">
+            <h2>Experience</h2>
             <div class="study-grid">
                 <article class="study-card">
-                    <h3>Centralized Event Logging Platform | fAIshion.ai</h3>
+                    <p class="exp-meta">fAIshion.ai &nbsp;·&nbsp; Backend Developer &nbsp;·&nbsp; 2024 – Present</p>
+                    <h3>Centralized Event Logging Platform</h3>
                     <p><strong>Problem:</strong> Logging was service-specific, MongoDB-heavy, and caused duplicate calls and schema drift.</p>
                     <p><strong>Approach:</strong> Built a centralized logging API and standardized event schema across backend and frontend integrations.</p>
                     <p><strong>Tradeoffs:</strong> Invested upfront in shared contracts and migration effort to gain long-term observability and consistency.</p>
                     <p><strong>Result:</strong> Reduced redundant DB calls by ~60% and improved reliability of production event capture.</p>
                 </article>
                 <article class="study-card">
-                    <h3>Health Insurance Modernization | Deloitte</h3>
+                    <p class="exp-meta">Deloitte &nbsp;·&nbsp; Java Developer &nbsp;·&nbsp; 2019 – 2023</p>
+                    <h3>Health Insurance Modernization</h3>
                     <p><strong>Problem:</strong> Legacy mainframe workflows were limiting scalability and slowing claims turnaround.</p>
                     <p><strong>Approach:</strong> Migrated logic into Java/Spring Boot microservices with REST APIs and IBM ODM rule services.</p>
                     <p><strong>Tradeoffs:</strong> Balanced strict release timelines with phased modernization to reduce migration risk.</p>
                     <p><strong>Result:</strong> Delivered 65+ successful sprints, improved processing efficiency, and maintained zero post-release defects.</p>
                 </article>
                 <article class="study-card">
-                    <h3>Life Insurance API Enablement | TCS</h3>
+                    <p class="exp-meta">TCS &nbsp;·&nbsp; Java Developer &nbsp;·&nbsp; 2017 – 2019</p>
+                    <h3>Life Insurance API Enablement</h3>
                     <p><strong>Problem:</strong> Legacy life insurance modules needed API-first access and cleaner maintainability.</p>
                     <p><strong>Approach:</strong> Developed RESTful Java services, optimized backend modules, and supported stable releases with unit tests.</p>
                     <p><strong>Tradeoffs:</strong> Worked within legacy constraints while incrementally introducing cleaner coding patterns.</p>
@@ -173,7 +175,7 @@
         <!-- Tech Stack Section -->
         <section id="stack" class="stack section-reveal">
             <h2>Tech Stack</h2>
-            <div class="chips" id="skillsContainer"></div>
+            <div id="skillsApp"></div>
         </section>
 
         <!-- Credibility -->
@@ -212,16 +214,23 @@
             </ul>
         </section>
 
+        <!-- Booking Section -->
+        <section id="booking" class="booking section-reveal">
+            <h2>Book a Meeting</h2>
+            <p>Pick a slot that works for you — no back-and-forth needed.</p>
+            <div id="bookingApp"></div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact section-reveal">
             <h2>Let’s build something useful.</h2>
             <p>Open to backend and software engineering roles where reliability, scale, and business impact matter.</p>
-            <a class="btn primary" href="mailto:sonashree.g@gmail.com">Get in Touch ↗</a>
+            <div id="contactApp"></div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Sona Gutha • Built with HTML, CSS & TypeScript</p>
+        <p>© 2026 Sona Gutha • Built with HTML, TypeScript & React</p>
         <div class="footer-social" aria-label="Social links">
             <a href="https://www.linkedin.com/in/sona-gutha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -236,6 +245,10 @@
         </div>
     </footer>
 
+    <div id="backToTopApp"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+    <script src="scripts/react-app.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
